@@ -1,0 +1,119 @@
+/*
+  Author: Nate Slowey
+  Date: 07/7/24
+  File Name: styles.css
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, h3, ul, p{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+
+/* Style rules for navigation */
+nav {
+  background-color: #013552;
+  margin-top: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul {
+  text-align: center;
+}
+
+nav li {
+  display: block;
+  border-top: 2px solid #027FAD;
+}
+
+nav li:first-child {
+  border-top: none;
+}
+
+nav li a:hover {
+  background-color:#027FAD;
+  color: #013552;
+}
+
+nav li a {
+  display: block;
+  text-decoration: none;
+  color: #027FAD;
+  padding: 0.75em 2em;
+}
+
+
+/* Style rules for main content */
+.tab-desk {
+  display: none;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+main {
+  color:#013552;
+}
+
+img {
+  width: 100%;
+}
+
+.image2 {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 350px;
+}
+
+h1{
+  text-align: center;
+  padding: 1em;
+}
+
+main p {
+  padding: 1em 0.75em;
+}
+
+.row1, .row2{
+  background-color: #7ea7b6;
+}
+
+.image1 {
+  margin: 0.5em auto;
+}
+
+
+/* Style rules for footer content */
+.socials img {
+  max-width: 30px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.socials li {
+  margin: 1em;
+}
+
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 620px) {
+  .tab-desk{
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  main p {
+    column-count: 2;
+  }
+
+}

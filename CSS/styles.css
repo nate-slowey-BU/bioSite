@@ -9,8 +9,12 @@ body, header, nav, main, footer, img, h1, h3, ul, p{
   margin: 0;
   padding: 0;
   border: 0;
+  box-sizing: border-box;
 }
 
+body {
+  height: 100vh;
+}
 
 /* Style rules for navigation */
 nav {
@@ -21,11 +25,18 @@ nav {
 
 nav ul {
   text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
 }
 
-nav li {
-  display: block;
-  border-top: 2px solid #027FAD;
+ nav li {
+ width: 33.3%;
+ border-right: 2px solid #027FAD;
+}
+
+nav li:last-child {
+  border-right: none;
 }
 
 nav li:first-child {
@@ -52,20 +63,33 @@ nav li a {
 
 body {
   font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-  color:#013552;
+  color:#027FAD;
+  line-height: 1.2;
+  /* not in textbook */
+  flex-grow: 1;
 }
 
 img {
   width: 100%;
 }
 
-.image2 {
+#image1{
+  margin: 0;
+}
+
+.image2, .image3 {
   width: 80%;
   margin: 0 auto;
   max-width: 350px;
+}
+
+.image3 {
+  margin: 2em auto;
 }
 
 h1{
@@ -78,15 +102,36 @@ main p {
 }
 
 .row1, .row2{
-  background-color: #7ea7b6;
+  background-color: #013552;
 }
 
-.image1 {
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+.container p {
+  padding-top: 0;
+}
+
+.image1, .image2 {
   margin: 0.5em auto;
 }
 
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 80%;
+ justify-content: center;
+}
+
+figure img{
+  border: 5px solid #013552;
+  box-shadow: 5px 5px  #027FAD;
+}
 
 /* Style rules for footer content */
+
 .socials img {
   max-width: 30px;
 }
@@ -114,6 +159,25 @@ main p {
 
   main p {
     column-count: 2;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 40% 40%;
+  }
+
+}
+
+/* Media Query for Large Desktop Viewport */
+@media screen and (min-width: 1025px) {
+  footer{
+    background: linear-gradient(#027FAD,#013552);
+    background-repeat: no-repeat;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 27% 27% 27%;
+    max-width: 1600px;
+    margin: 0 auto;
   }
 
 }
